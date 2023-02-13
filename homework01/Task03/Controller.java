@@ -33,7 +33,8 @@ public class Controller {
             case 5:
                 res = Modul.div_ost(firstval, secval);
                 break;
-
+            case 6:
+                return;
             default:
                 break;
 
