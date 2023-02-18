@@ -48,10 +48,8 @@ public class Task04 {
                             ic=100;
                             isSol=true;
                         break;}
-                    
                 } 
             }
-            
         }
         if (!isSol) System.out.println("нет решений");
     }
