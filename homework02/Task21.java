@@ -27,7 +27,6 @@ public class Task21 {
         boolean ft = true;
         str = str.replaceAll("[{} ]", "");
         String[] arr = str.split("[:,]");
-        System.out.println(arr.length);
         StringBuilder sb = new StringBuilder("SELECT * FROM students WHERE ");
         for (int i = 0; i < arr.length; i += 2) {
             if (!arr[i + 1].equals("\"null\"")) {
