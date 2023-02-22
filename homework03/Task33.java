@@ -11,7 +11,7 @@ public class Task33 {
         ArrayList<Integer> arr = new ArrayList<>();
         Random rnd = new Random();
         for (int i = 0; i < 10; i++) {
-            arr.add(rnd.nextInt(0, 11));
+            arr.add(rnd.nextInt(1, 11));
         }
         System.out.println(arr);
         System.out.printf("max: %3d \n",getmax(arr));
@@ -38,7 +38,7 @@ public class Task33 {
         for (Integer i : arr) {
             sr=sr+i;
         }
-        sr=sr/arr.size();
-        return sr;
+        
+        return sr/arr.size();
     }
 }
