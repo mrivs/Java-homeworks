@@ -16,10 +16,31 @@ public class Task34 {
         ArrayList<Integer> co1 = new ArrayList<>();
         ArrayList<Integer> co2 = new ArrayList<>();
         Random rnd = new Random();
-        for (int i = 0; i < 10; i++) {
-            co1.add(rnd.nextInt(1, 11));
-            co2.add(rnd.nextInt(1, 11));
+        for (int i = 0; i < 20; i++) {
+            co1.add(rnd.nextInt(0, 7));
+            co2.add(rnd.nextInt(3, 11));
         }
+        System.out.println(co1);
+        System.out.println(co2);
+        System.out.println(diff(co1,co2));
+        System.out.println(diff(co2,co1));
+        System.out.println(simdiff(co1,co2));
     }
+
+    public static ArrayList<Integer> diff( ArrayList<Integer> co1, ArrayList<Integer> co2 ) {
+        ArrayList<Integer> res  = new ArrayList<Integer>(co1.size());
+        for (int item : co1) res.add(item);
+        res.removeAll(co2);
+        return res;
+    }
+
+    public static ArrayList<Integer> simdiff( ArrayList<Integer> co1, ArrayList<Integer> co2 ) {
+        ArrayList<Integer> res  = new ArrayList<Integer>(diff(co1,co2).size()+diff(co2,co1).size());
+        res.addAll(diff(co1,co2));
+        res.addAll(diff(co2,co1));
+        return res;
+
+    }
+
 
 }

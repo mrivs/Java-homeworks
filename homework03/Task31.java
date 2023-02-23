@@ -10,15 +10,15 @@ public class Task31 {
         System.out.println(Arrays.toString(arr));
     }
 
-    private static void mergeSort(int[] arr) { // функция сортировки
+    private static void mergeSort(int[] arr) { // функция сортировки слиянием
 
         int len = arr.length;
         if (len == 1)
             return;
 
         int mid = len / 2;
-        int[] larr = new int[mid]; // левая часть массива
-        int[] rarr = new int[len - mid]; // правая часть массива
+        int[] larr = new int[mid];          // левая часть массива
+        int[] rarr = new int[len - mid];    // правая часть массива
 
         for (int i = 0; i < mid; i++) {
             larr[i] = arr[i];
@@ -26,9 +26,9 @@ public class Task31 {
         for (int i = 0; i < len - mid; i++) {
             rarr[i] = arr[i + mid];
         }
-        mergeSort(larr); // рекурсивный вызов для левой части
-        mergeSort(rarr); // рекурсивный вызов для правой части
-        merge(arr, larr, rarr);
+        mergeSort(larr);        // рекурсивный вызов для левой части
+        mergeSort(rarr);        // рекурсивный вызов для правой части
+        merge(arr, larr, rarr); // вызов функции слияния 2-х массивов
     }
 
     private static void merge(int[] arr, int[] larr, int[] rarr) { // функция слияния двух массивов
@@ -49,13 +49,13 @@ public class Task31 {
                 ind++;
             }
         }
-        while (i < ll) {
+        while (i < ll) {                    
             arr[ind] = larr[i];
             i++;
             ind++;
         }
         while (j < lr) {
-            arr[ind] = rarr[j];
+            arr[ind] = rarr[j];     
             j++;
             ind++;
         }

@@ -35,7 +35,7 @@ public class Task33 {
     }
     public static double getam(ArrayList<Integer> arr){
         double sr=0;
-        for (Integer i : arr) {
+        for (int i : arr) {
             sr=sr+i;
         }
         
