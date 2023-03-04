@@ -23,23 +23,23 @@ public class Controller {
             n = scaner.nextInt();
 
             if (n == 1) {
-                System.out.println("Введите минимальное значение ОЗУ");
+                System.out.println("Введите минимальное значение ОЗУ (16) ");
                 val = scaner.nextInt();
                 techFilter.put("RAM", val);
 
             } else if (n == 2) {
-                System.out.println("Введите минимальное значение SSD");
+                System.out.println("Введите минимальное значение SSD (500) ");
                 val = scaner.nextInt();
                 techFilter.put("SSD", val);
 
             } else if (n == 3) {
-                System.out.println("Введите ОС ");
+                System.out.println("Введите ОС (Windows, macOS)");
                 scaner.nextLine();
                 str = scaner.nextLine();
                 labelFilter.put("OC", str);
 
             } else if (n == 4) {
-                System.out.println("Введите цвет (Black)");
+                System.out.println("Введите цвет (Black, White)");
                 scaner.nextLine();
                 str = scaner.nextLine();
                 labelFilter.put("Color", str);

@@ -14,7 +14,7 @@ public static Set<Notebook> getData(){
     notebooks.add(new Notebook(32, 1000, 4000, "Asus", "Red", "Windows"));
     notebooks.add(new Notebook(8, 256, 3000, "Apple", "Gold", "macOS"));
     notebooks.add(new Notebook(8, 512,  3000, "Apple", "White", "macOS"));
-    notebooks.add(new Notebook(8, 512,  2000, "Apple", "White", "macOS"));
+    notebooks.add(new Notebook(16, 512,  2000, "Apple", "White", "macOS"));
     notebooks.add(new Notebook(32, 512,  3200, "Sumsung", "Black", "Windows"));
     notebooks.add(new Notebook(12, 2000,  4000, "Sumsung", "Green", "Linux"));
     return notebooks;
